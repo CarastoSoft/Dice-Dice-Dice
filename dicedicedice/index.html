@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dice Dice Dice - by CarastoSoft</title>
+  
+  <!-- Favicon (Browser Tab Icon) -->
+  <link rel="icon" type="image/png" href="dice_icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
@@ -64,7 +68,29 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 30px;
+      gap: 25px;
+    }
+
+    /* Hero Branding mit Logo */
+    .hero-branding {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .game-logo {
+      width: 96px;
+      height: auto;
+      image-rendering: pixelated; /* Gestochen scharfes Pixel-Art Rendering */
+      filter: drop-shadow(0 0 12px rgba(212, 163, 89, 0.3));
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
     }
 
     .game-title {
@@ -75,7 +101,6 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       text-shadow: 3px 3px 0px #000, 0 0 10px rgba(212, 163, 89, 0.4);
-      margin-top: 10px;
     }
 
     .hero-subtitle {
@@ -85,7 +110,6 @@
       text-align: center;
       line-height: 1.6;
       max-width: 600px;
-      margin-top: -15px;
     }
 
     .main-content {
@@ -192,10 +216,10 @@
       color: #ffffff;
     }
 
-    /* CTA / Download Buttons Area (Unter dem Text) */
+    /* CTA / Download Buttons Area */
     .cta-container {
       display: flex;
-      flex-direction: flex-start;
+      flex-direction: row;
       flex-wrap: wrap;
       gap: 15px;
       align-items: flex-end;
@@ -457,7 +481,12 @@
 
   <div class="site-container">
     
-    <h1 class="game-title">DICE DICE DICE</h1>
+    <!-- Hero Header mit Game Logo -->
+    <div class="hero-branding">
+      <img src="dice_icon.png" alt="Dice Dice Dice Logo" class="game-logo">
+      <h1 class="game-title">DICE DICE DICE</h1>
+    </div>
+
     <p class="hero-subtitle">ONE TAP.<br>INFINITE DICE POWER!</p>
 
     <main class="main-content">
@@ -500,7 +529,7 @@
           </li>
         </ul>
 
-        <!-- Call To Action Buttons (Unterhalb des Textes) -->
+        <!-- Call To Action Buttons -->
         <div class="cta-container">
           
           <!-- Offizieller TestFlight Badge Button -->
@@ -587,8 +616,6 @@
 
     <footer>
       <div class="footer-links">
-        <a href="https://www.carastosoft.com">CarastoSoft Home</a>
-        <span class="separator">|</span>
         <a href="https://www.carastosoft.com/privacy-policy" target="_blank">Privacy Policy</a>
         <span class="separator">|</span>
         <a href="https://www.carastosoft.com/terms-of-service" target="_blank">Terms of Service</a>
