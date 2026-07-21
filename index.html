@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dice Dice Dice</title>
+  <title>Dice Dice Dice - by CarastoSoft</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
@@ -23,12 +23,48 @@
       background-size: 20px 20px;
       color: #e0e0e0;
       font-family: 'Share Tech Mono', monospace;
-      padding: 20px 10px;
+      padding: 0 10px 20px 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
       width: 100%;
+    }
+
+    /* Studio Header Navigation ganz oben */
+    .studio-header {
+      width: 100%;
+      max-width: 950px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #2a2228;
+    }
+
+    .studio-brand {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.75rem;
+      color: #888888;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+
+    .studio-brand:hover {
+      color: #d4a359;
+    }
+
+    .studio-badge {
+      background: #2a2228;
+      color: #d4a359;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-size: 0.6rem;
+      border: 1px solid #3a3238;
     }
 
     .site-container {
@@ -266,6 +302,16 @@
 </head>
 <body>
 
+  <!-- Studio Header -->
+  <header class="studio-header">
+    <a href="https://www.carastosoft.com" class="studio-brand">
+      <span class="studio-badge">STUDIO</span> CARASTOSOFT
+    </a>
+    <a href="https://www.carastosoft.com" class="studio-brand" style="font-size: 0.65rem;">
+      &larr; Main Site
+    </a>
+  </header>
+
   <div class="site-container">
     
     <h1 class="game-title">DICE DICE DICE</h1>
@@ -314,7 +360,7 @@
 
     </main>
 
-    <!-- Screenshot Galerie mit 4 Elementen & Beschreibungen -->
+    <!-- Screenshot Galerie -->
     <section class="gallery-section">
       <h2 class="gallery-title">SCREENSHOTS</h2>
       <div class="gallery-grid">
@@ -337,7 +383,7 @@
 
         <div class="gallery-item">
           <img src="prestige.png" alt="Prestige System Preview">
-          <div class="gallery-caption-box gallery-info">
+          <div class="gallery-info">
             <div class="gallery-caption">PRESTIGE</div>
             <div class="gallery-subtext">Reset for permanent perks & break high scores</div>
           </div>
@@ -356,6 +402,8 @@
 
     <footer>
       <div class="footer-links">
+        <a href="https://www.carastosoft.com">CarastoSoft Home</a>
+        <span class="separator">|</span>
         <a href="https://www.carastosoft.com/privacy-policy" target="_blank">Privacy Policy</a>
         <span class="separator">|</span>
         <a href="https://www.carastosoft.com/terms-of-service" target="_blank">Terms of Service</a>
