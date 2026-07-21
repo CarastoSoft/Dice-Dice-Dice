@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CarastoSoft — Software & Digital Product Studio</title>
   
+  <!-- Minimalist Pixel-Art 'C' Favicon (Inline SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'><path fill='%2308090b' d='M0 0h16v16H0z'/><path fill='%23ffffff' d='M4 3h8v2H4zm-2 2h2v6H2zm2 6h8v2H4z'/></svg>">
+
   <!-- Premium Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -226,12 +229,37 @@
       color: var(--text-secondary);
     }
 
+    /* Title Block mit Card Icon */
+    .project-title-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .project-icon {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      image-rendering: pixelated;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 4px;
+      flex-shrink: 0;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .project-card:hover .project-icon {
+      border-color: var(--border-hover);
+      transform: scale(1.05);
+    }
+
     .project-title {
       font-size: 1.6rem;
       font-weight: 500;
       letter-spacing: -0.02em;
       color: #ffffff;
-      margin-bottom: 12px;
     }
 
     .project-description {
@@ -373,7 +401,10 @@
               <span class="project-category">iOS Mobile Game</span>
               <span class="project-status">Available</span>
             </div>
-            <h3 class="project-title">Dice Dice Dice</h3>
+            <div class="project-title-wrapper">
+              <img src="dice_icon.png" alt="Dice Dice Dice Icon" class="project-icon">
+              <h3 class="project-title">Dice Dice Dice</h3>
+            </div>
             <p class="project-description">
               A minimalist 16-bit retro clicker game centered around engaging progression loops, strategy, and multiplier mechanics.
             </p>
@@ -391,7 +422,7 @@
               <span class="project-category">Software Development</span>
               <span class="project-status">In Development</span>
             </div>
-            <h3 class="project-title">Upcoming Projects</h3>
+            <h3 class="project-title" style="margin-bottom: 12px;">Upcoming Projects</h3>
             <p class="project-description">
               New native software products and tools for iOS and macOS are currently in active development.
             </p>
